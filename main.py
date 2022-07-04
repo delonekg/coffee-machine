@@ -61,11 +61,7 @@ while running:
         Coffee: {resources['coffee']}g
         Money: ${resources['money']}
         """)
-    elif order == "espresso":
-        process_order(order)
-    elif order == "latte":
-        process_order(order)
-    elif order == "cappuccino":
+    elif order == "espresso" or order == "latte" or order == "cappuccino":
         process_order(order)
     else:
         print("Invalid drink! Please try again.")
