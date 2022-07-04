@@ -16,6 +16,7 @@ def process_order(order_name):
             print(f"Sorry there is not enough {resource}.")
 
     if resources_available == len(resources_required):
+        print(f"The price of your drink is ${drink_cost}.")
         print("Please insert coins.")
 
         quarters = int(input("How many quarters?: "))
@@ -33,6 +34,7 @@ def process_order(order_name):
             resources["money"] += profit
             make_drink(order_name)
         elif paid == drink_cost:
+            resources["money"] += paid
             make_drink(order_name)
         else:
             print("Sorry, that's not enough money. Money refunded.")
